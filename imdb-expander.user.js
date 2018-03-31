@@ -2,8 +2,7 @@
 // @name         IMDb FAQ Expander
 // @version      1.0
 // @description  Adds a button to expand all questions on an IMBd FAQ page
-// @match        *://*.imdb.com/title/*/faq
-// @match        *://*.imdb.com/title/*/faq?ref_=tt_faq_sm
+// @match        *://*.imdb.com/title/*/faq*
 // @require      http://code.jquery.com/jquery-latest.js
 // @run-at       document-end
 // ==/UserScript==
