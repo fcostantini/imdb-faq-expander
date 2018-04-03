@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         IMDb FAQ Expander
-// @version      1.0
+// @version      1.1
 // @description  Adds a button to expand all questions on an IMBd FAQ page
 // @match        *://*.imdb.com/title/*/faq*
 // @require      http://code.jquery.com/jquery-latest.js
@@ -13,11 +13,13 @@ function init() {
         $("#expand-all").click( function(){
             var $this = $(this);
             var label = $this.text();
-            if ( label === "Expand all" )
+            if ( label === "Expand all" ){
+                $(".ipl-hideable-container").addClass("ipl-hideable-container--shown").removeClass( "ipl-hideable-container--hidden" );
                 $this.text("Close all");
-            else
+            } else {
                 $this.text("Expand all");
-            $(".ipl-hideable-container").toggle();
+                $(".ipl-hideable-container").removeClass("ipl-hideable-container--shown").addClass( "ipl-hideable-container--hidden" );
+            }
         });
     });
 }
