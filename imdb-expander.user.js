@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         IMDb FAQ Expander
-// @version      1.2
+// @version      1.3
 // @description  Adds a button to expand all questions on an IMBd FAQ page
 // @match        *://*.imdb.com/title/*/faq*
 // @require      http://code.jquery.com/jquery-latest.js
@@ -9,7 +9,7 @@
 
 function init() {
     $( document ).ready(function() {
-        $("#faq-answered").before("<div style='text-align: right'><button id='expand-all' class='ebtn'>Expand all</button></div>");
+        $("#faq-no-spoilers").before("<div style='text-align: right'><button id='expand-all' class='ebtn'>Expand all</button></div>");
         $("#expand-all").click( function(){
             var $this = $(this);
             var label = $this.text();
